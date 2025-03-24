@@ -1,29 +1,32 @@
 import Image from 'next/image';
 
+const filterCategories = [
+  {
+    name: 'Categories',
+    items: ['Landing Page', 'Portfolio', 'E-commerce', 'Blog', 'Dashboard']
+  }
+];
+
+const templates = [
+  {
+    id: 1,
+    title: 'Modern SaaS',
+    description: 'A professional landing page for your SaaS product',
+    image: '/template1.png',
+    by: '3rdshade',
+    demoUrl: '/templates/saas'
+  },
+  {
+    id: 2,
+    title: 'Portfolio Pro',
+    description: 'Showcase your work with this modern portfolio template',
+    image: '/template2.png',
+    by: '3rdshade',
+    demoUrl: '/templates/portfolio'
+  }
+];
+
 export default function Home() {
-  const templates = [
-    {
-      id: 1,
-      title: "Next.js Boilerplate",
-      description: "Get started with Next.js and React in seconds.",
-      image: "/template1.png",
-      demoUrl: "/templates/saas",
-      by: "3rdshade"
-    },
-    {
-      id: 2,
-      title: "Portfolio Pro",
-      description: "Professional portfolio template built with Next.js",
-      image: "/template2.png",
-      demoUrl: "/templates/portfolio",
-      by: "3rdshade"
-    }
-  ];
-
-  const filterCategories = [
-    { name: 'Use Case', items: ['AI', 'Starter', 'Ecommerce', 'Blog', 'Edge Functions', 'Edge Middleware', 'Edge Config', 'Portfolio'] },
-  ];
-
   return (
     <div className="min-h-screen bg-black">
       {/* Header */}
@@ -52,7 +55,7 @@ export default function Home() {
       <div className="max-w-[1400px] mx-auto px-6 py-16">
         {/* Title Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
             Find your Template
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
@@ -116,6 +119,7 @@ export default function Home() {
                       fill
                       className="object-cover"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"></div>
                     <div className="absolute bottom-2 right-2">
                       <div className="bg-black/50 backdrop-blur-sm rounded-full p-1">
                         <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
