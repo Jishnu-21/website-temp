@@ -52,10 +52,9 @@ const defaultData: TemplateData = {
 
 interface EditTemplateClientProps {
   params: { type: string };
-  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default function EditTemplateClient({ params, searchParams }: EditTemplateClientProps) {
+export default function EditTemplateClient({ params }: EditTemplateClientProps) {
   const router = useRouter();
   
   const handleSave = async (data: TemplateData) => {

@@ -12,15 +12,6 @@ type Props = {
 };
 
 export default async function EditTemplatePage({ params, searchParams }: Props) {
-  const [resolvedParams, resolvedSearchParams] = await Promise.all([
-    params,
-    searchParams
-  ]);
-  
-  return (
-    <EditTemplateClient 
-      params={resolvedParams} 
-      searchParams={resolvedSearchParams} 
-    />
-  );
+  const resolvedParams = await params;
+  return <EditTemplateClient params={resolvedParams} />;
 }
