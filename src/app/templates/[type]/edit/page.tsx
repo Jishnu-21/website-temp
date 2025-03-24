@@ -8,10 +8,9 @@ export const metadata: Metadata = {
 
 type Props = {
   params: Promise<{ type: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export default async function EditTemplatePage({ params, searchParams }: Props) {
+export default async function EditTemplatePage({ params }: Props) {
   const resolvedParams = await params;
   return <EditTemplateClient params={resolvedParams} />;
 }
