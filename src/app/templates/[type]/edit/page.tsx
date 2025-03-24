@@ -50,7 +50,13 @@ const defaultData: TemplateData = {
   footerText: 'Building digital experiences that matter.'
 };
 
-export default function EditTemplate({ params }: { params: { type: string } }) {
+type Props = {
+  params: {
+    type: string;
+  };
+};
+
+export default function EditTemplate({ params }: Props) {
   const router = useRouter();
   
   const handleSave = async (data: TemplateData) => {
