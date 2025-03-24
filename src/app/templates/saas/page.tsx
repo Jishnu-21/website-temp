@@ -97,9 +97,9 @@ export default function SaasTemplate() {
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Trusted by Leaders</h2>
-            <p className="text-xl text-gray-600">See what our customers have to say about us.</p>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">What Our Clients Say</h2>
+            <p className="text-gray-400 mb-12">Trusted by thousands of companies worldwide</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -123,7 +123,7 @@ export default function SaasTemplate() {
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <p className="text-gray-600 mb-6">"{testimonial.quote}"</p>
+                <p className="text-gray-600 mb-6">{testimonial.quote}</p>
                 <div className="flex items-center">
                   <Image
                     src={testimonial.image}

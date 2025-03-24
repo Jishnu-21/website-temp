@@ -97,8 +97,8 @@ export default function PortfolioTemplate() {
               <h1 className="text-5xl font-bold text-white mb-6 leading-tight">
                 {data.title}
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                {data.subtitle}
+              <p className="text-lg text-gray-400 mb-8">
+                I&apos;m passionate about creating beautiful and functional web experiences
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a href="#work" className="bg-purple-500 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-purple-600 transition-colors">

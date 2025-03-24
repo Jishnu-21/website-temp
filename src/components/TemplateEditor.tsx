@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { TemplateData, Project, SkillCategory, SocialLink } from '@/types/template';
+import { TemplateData, Project, SkillCategory } from '@/types/template';
 
 interface TemplateEditorProps {
   initialData: TemplateData;
