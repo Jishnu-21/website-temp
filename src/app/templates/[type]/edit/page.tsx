@@ -6,11 +6,21 @@ export const metadata: Metadata = {
   description: 'Customize your website template',
 };
 
-interface PageProps {
-  params: { type: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
+type Props = {
+  params: Promise<{ type: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
 
-export default async function EditTemplatePage(props: PageProps) {
-  return <EditTemplateClient {...props} />;
+export default async function EditTemplatePage({ params, searchParams }: Props) {
+  const [resolvedParams, resolvedSearchParams] = await Promise.all([
+    params,
+    searchParams
+  ]);
+  
+  return (
+    <EditTemplateClient 
+      params={resolvedParams} 
+      searchParams={resolvedSearchParams} 
+    />
+  );
 }
